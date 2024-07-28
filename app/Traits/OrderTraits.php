@@ -20,8 +20,8 @@ trait OrderTraits
         return $this->orderServices->createOrder($request);
 	}
 
-    public function getOrderById(OrderRequest $request)
-	{
-		return $this->orderServices->getOrderById($request);
-	}
+	public function getOrderById($user_id)
+    {
+        return $this->orderServices->getOrderById($user_id);
+    }
 }

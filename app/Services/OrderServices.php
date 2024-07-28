@@ -31,10 +31,10 @@ class OrderServices implements IorderServices
             return response()->json(['success' => false, 'message' => 'Could not create Order! Something is wrong!']);
         }
     }
-    public function getOrderById(OrderRequest $request)
+    public function getOrderById($user_id)
     {
-        $order = $this->orderRepository->getOrderById($request);
-
+        $order = $this->orderRepository->getOrderById($user_id);
+        
         if (!$order->count() > 0) {
             return response()->json(['success' => false, 'message' => 'Order does not exist!']);
         }

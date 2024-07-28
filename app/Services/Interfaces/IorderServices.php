@@ -9,6 +9,6 @@ use Illuminate\Http\Request;
 interface IorderServices
 {
     public function createOrder(CreateOrderRequest $request);
-	public function getOrderById(OrderRequest $request);
+	public function getOrderById($user_id);
 	
 }

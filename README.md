@@ -41,7 +41,11 @@ To get a local copy up and running, follow these simple steps:
     ```bash
    php artisan migrate
 
-7. Serve the application:
+7. Seed the database:
+    ```bash
+    php artisan db:seed
+
+8. Serve the application:
     ```bash
     php artisan serve
 
